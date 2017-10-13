@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 1202px;
+            margin: 150px auto;
+        }
+        ul{
+            width: 1202px;
+            list-style: none;
+        }
+        li{
+            width: 240px;
+            float: left;
+            overflow: hidden;
+        }
+    </style>
+    <!--600 150 600 1200 240 -->
+</head>
+<body>
+<div>
+    <ul>
+        <li><img src="1.jpg" alt=""/></li>
+        <li><img src="2.jpg" alt=""/></li>
+        <li><img src="3.jpg" alt=""/></li>
+        <li><img src="4.jpg" alt=""/></li>
+        <li><img src="5.jpg" alt=""/></li>
+    </ul>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.js"></script>
+<script>
+    $(function () {
+        $('li').hover(function () {
+            $(this).stop().animate({width:600},500).siblings().stop().animate({width:150},500)
+        }, function () {
+            $('li').stop().animate({width:240},500)
+        })
+    })
+
+
+
+
+
+
+</script>
+</html>
